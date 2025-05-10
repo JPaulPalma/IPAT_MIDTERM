@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import FreeTuitionImage from "../src/assets/FREETUITION.png";
 import EaristLogo from "../src/assets/EaristLogo.png";
 import ApproveSignature from "../src/assets/ApproveSignature.png";
+import QRCodeImage from "./assets/QRCODE.png";
+import SignatureImage from "./assets/mysignature.png";
 
 const CertificateOfRegistration = () => {
     const navigate = useNavigate();
@@ -14,7 +16,7 @@ const CertificateOfRegistration = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     
-    const registrationNo = "2425208923";
+    const registrationNo = "2425208923";	
 
     useEffect(() => {
         fetchCertificate();
@@ -2701,7 +2703,26 @@ const CertificateOfRegistration = () => {
                                 </td>
 
                             </tr>
-
+                            <div
+  style={{
+    position: "absolute",
+    bottom: "470px",  
+    left: "490px",   
+    width: "150px",
+    height: "40px",
+    zIndex: 1,
+  }}
+>
+  <img
+    src={SignatureImage}
+    alt="Student Signature"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "contain",
+    }}
+  />
+</div>
                             <tr>
                                 <td
                                     colSpan={7}
@@ -3029,6 +3050,30 @@ const CertificateOfRegistration = () => {
                                         verticalAlign: "middle", // Centers vertically
                                     }}
                                 >
+
+<div
+                  style={{
+                    position: "absolute",
+                    bottom: "40px",
+                    right: "0px",
+                    width: "170px",
+                    height: "170px",
+                    zIndex: 1,
+                  }}
+                >
+                  <img
+                    src={QRCodeImage}
+                    alt="QR Code"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                  
+                    }}
+                  />
+                </div>
+
+
                                     <input
                                         type="text"
                                         value={currentDate}
@@ -3075,4 +3120,3 @@ const CertificateOfRegistration = () => {
 };
 
 export default CertificateOfRegistration;
-

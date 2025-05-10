@@ -15,7 +15,7 @@ const db = mysql2.createPool({
     host: "localhost",
     user: "root",
     password: "",
-    database: "earist",
+    database: "palma_cor",
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
